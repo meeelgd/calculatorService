@@ -11,30 +11,50 @@ public class CalculatorService {
 
     @GET
     @Path("/add/{a}/{b}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String add(@PathParam("a") int a, @PathParam("b") int b) {
-        return (a + b) + "";
+    @Produces(MediaType.APPLICATION_JSON)
+    public Operation add(@PathParam("a") int a, @PathParam("b") int b) {
+        Operation op = new Operation();
+        op.setOperationType("ADD");
+        op.setNumber1(a);
+        op.setNumber2(b);
+        op.setResult(a+b);
+        return op;
     }
 
     @GET
     @Path("/subtract/{a}/{b}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String subtract(@PathParam("a") int a, @PathParam("b") int b) {
-        return (a - b) + "";
+    @Produces(MediaType.APPLICATION_JSON)
+    public Operation subtract(@PathParam("a") int a, @PathParam("b") int b) {
+        Operation op = new Operation();
+        op.setOperationType("SUBTRACT");
+        op.setNumber1(a);
+        op.setNumber2(b);
+        op.setResult(a-b);
+        return op;
     }
 
     @GET
     @Path("/multiply/{a}/{b}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String multiply(@PathParam("a") int a, @PathParam("b") int b) {
-        return (a * b) + "";
+    @Produces(MediaType.APPLICATION_JSON)
+    public Operation multiply(@PathParam("a") int a, @PathParam("b") int b) {
+        Operation op = new Operation();
+        op.setOperationType("MULTIPLY");
+        op.setNumber1(a);
+        op.setNumber2(b);
+        op.setResult(a*b);
+        return op;
     }
 
     @GET
     @Path("/divide/{a}/{b}")
-    @Produces(MediaType.TEXT_PLAIN)
-    public String divide(@PathParam("a") int a, @PathParam("b") int b) {
-        return (a / b) + "";
+    @Produces(MediaType.APPLICATION_JSON)
+    public Operation divide(@PathParam("a") int a, @PathParam("b") int b) {
+        Operation op = new Operation();
+        op.setOperationType("DIVIDE");
+        op.setNumber1(a);
+        op.setNumber2(b);
+        op.setResult(a/b);
+        return op;
     }
 
 }
