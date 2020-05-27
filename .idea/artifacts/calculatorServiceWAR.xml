@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="webService:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/webService_war_exploded</output-path>
+  <artifact type="exploded-war" name="calculatorServiceWAR">
+    <output-path>$PROJECT_DIR$/out/artifacts/calculatorServiceWAR</output-path>
     <root id="root">
       <element id="javaee-facet-resources" facet="calculatorService/web/Web" />
       <element id="directory" name="WEB-INF">
